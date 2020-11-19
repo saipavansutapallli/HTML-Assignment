@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <link rel="stylesheet" type="text/css" href="Book.css">
+
+    <script src="validation.js"></script>
+</head>
+<body>
+    <header><h3><b>BOOK ENTRY FORM</b></h3></header>
+
+    <form action="#" id="bookForm" method="GET">
+
+        <table class="bookTable">
+
+            <tr>
+                <td><label for="titleId">Book title: </label></td>
+                <td><input type="text" id="titleId" name="title"></td>
+                <td><label id="title"></label></td>
+            </tr>
+
+            <tr>
+                <td><label for="isbnId">ISBN number: </label></td>
+                <td><input type="number" id="isbnId" name="isbn" maxlength="15"></td>
+                <td><label id="isbn"></label></td>
+            </tr>
+
+            <tr>
+                <td><label for="priceId">Price: </label></td>
+                <td><input type="text" id="priceId" name="price"></td>
+            </tr>
+
+            <tr>
+                <td><label for="dateId">Published date: </label></td>
+                <td><input type="date" id="dateId" name="date"></td>
+            </tr>
+
+            <tr>
+                <td><label for="bookId">Book type: </label></td>
+                <td><select name="book" id="bookId" required>
+                    <option value="" disabled selected>select one option</option>
+                    <option value="programming">Programming</option>
+                    <option value="framework">Framework</option>
+                </select></td>
+            </tr>
+
+            <tr>
+                <td><label for="copiesId">Number of copies: </label></td>
+                <td><input type="number" min="1" max="10" id="copiesId" name="copies"></td>
+                <td><label id="copies"></label></td>
+            </tr>
+
+            <tr>
+                <td><label for="publisherId">Publisher name: </label></td>
+                <td><input type="text" id="publisherId" name="publisher"></td>
+                <td><label id="publisher"></label></td>
+            </tr>
+            
+            <tr>
+                <td><label for="publisherAddressId">Publisher address: </label></td>
+                <td><textarea name="publisherAddress" id="publisherAddressId" cols="30" rows="10"></textarea></td>
+            </tr>
+
+            <tr>
+                <td><label for="authorId">Author name: </label></td>
+                <td><input type="text" id="authorId" name="author"></td>
+                <td><label id="author"></label></td>
+            </tr>
+            
+            <tr>
+                <td><label for="authorAddressId">Author address: </label></td>
+                <td><textarea name="authorAddress" id="authorAddressId" cols="30" rows="10"></textarea></td>
+            </tr>
+
+            <tr id="submitId">
+                <td><input type="submit" value="Submit" onclick="return validateBook()"></td>
+            </tr>
+        </table>
+
+    </form>
+    <footer id="footerContent">&copy; HCL 2020</footer>
+</body>
+</html>
